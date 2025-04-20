@@ -4,9 +4,9 @@ function App() {
 
   return (
     <>
-      <div className="MAIN w-[480px] font-serif md:w-[768px]">
-        <div className='w-[480px] h-[1181px] bg-[#EEF5F8] font-serif md:w-[768px]'>
-          <div className='Top h-[112px] w-[480px] p-[32px]'>
+      <div className="MAIN w-[480px] font-serif md:w-[768px] lg:w-[1024px]">
+        <div className='w-[480px] h-[1181px] bg-[#EEF5F8] font-serif md:w-[768px] lg:w-[1024px]'>
+          <div className='Top h-[112px] w-[480px] p-[32px] lg:w-[100%]'>
             <h1 className="text-blueOrg">APHRODITE</h1>
           </div>
           {/* the middle above img section goes here */}
@@ -30,11 +30,11 @@ function App() {
         </div>
 
 
-        <div className="flex flex-col items-center gap-10 mt-10">
+        <div className="flex flex-col items-center gap-10 mt-10 lg:mt-50">
           <h4 className="text-center text-ferozi text-sm">Our Services</h4>
           <h3 className="text-2xl text-center">Beauty Rituals of our offer</h3>
 
-          <div className="flex flex-col justify-center gap-10">
+          <div className="flex flex-col justify-center gap-10 lg:flex-row">
             <div className='services-card'>
               <img className='w-48 h-40' src="../public/servies/image.png" alt="" />
               <h4 className='text-ferozi text-sm mt-2'>Facial Treatments</h4>
@@ -60,19 +60,22 @@ function App() {
           <p className="text-center text-ferozi text-s">ABOUT US</p>
           <h3 className="text-2xl text-center mt-[25px] mb-[10px]">Crafting Beauty Beyond Boundaries</h3>
           <p className="opacity-50 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum amet officia voluptates aperiam veritatis </p>
-          <img className='mt-[20px]' src="../public/aboutus/image.png" alt="#" />
+          <img className='mt-[20px] md:h-[556px] w-[768px] object-cover' src="../public/aboutus/image.png" alt="#" />
 
           <img className='mt-[200px] mb-[200px] md:hidden' src="../public/aboutus/image copy.png" alt="#" />
-          <img className='mt-[200px] mb-[200px] md:block' src="../public/tablet/girlfacial.png" alt="#" />
+          <img className='mt-[200px] mb-[200px] lg:hidden md:block w-[768px] h-[556px]' src="../public/tablet/numbers.png" alt="#" />
+
+          <img className='mt-[200px] mb-[200px] md:hidden' src="../public/tablet/numbers.png" alt="#" />
+          <img className='mt-[200px] mb-[200px] md:hidden lg:block' src="../public/lg/numbers.png" alt="#" />
 
         </div>
         {/* the doctors meet div */}
-        <div className="doctors flex flex-col gap-[40px]">
           <h4 className='text-ferozi text-sm text-center'>MEET THE DOCTORS</h4>
           <h3 className="text-2xl text-center">Discover Our Experts</h3>
+        <div className="doctors flex flex-col gap-[40px] lg:flex-row">
           <div className='doctorsCard'>
             <div>
-            <img src="../public/doctors/hannah.png" alt="" />
+              <img className='md:h-[285px] w-[355px] object-cover object-center' src="../public/doctors/hannah.png" alt="" />
             </div>
             <h3 className="opacity-50 text-center"> plastic surgon</h3>
             <h4 className='text-[#000000] text-sm mt-2 text-center'>DR HANNAH WAGER</h4>
@@ -80,7 +83,7 @@ function App() {
           </div>
           <div className='doctorsCard'>
             <div>
-            <img src="../public/doctors/bryan.png" alt="" />
+              <img className='md:h-[285px] w-[355px] object-cover object-center' src="../public/doctors/bryan.png" alt="" />
             </div>
             <h3 className="opacity-50 text-center"> anasthestiologist</h3>
             <h4 className='text-[#000000] text-sm mt-2 text-center'>bryan</h4>
@@ -89,7 +92,7 @@ function App() {
 
           <div className='doctorsCard'>
             <div>
-            <img src="../public/doctors/last.png" alt="" />
+              <img className='md:h-[285px] w-[355px] object-cover object-center' src="../public/doctors/last.png" alt="" />
             </div>
             <h3 className="opacity-50 text-center"> dermatologist</h3>
             <h4 className='text-[#000000] text-sm mt-2 text-center'>DR sarah nelson</h4>
@@ -102,7 +105,7 @@ function App() {
 
         {/* the video img? */}
         <div className="flex flex-center justify-center">
-        <img src="../public/videosrc/image.png" alt="" />
+          <img className='md:h-[390px] w-full object-cover object-center' src="../public/videosrc/image.png" alt="" />
         </div>
 
         {/* the form goes here👇 HATE THE FORMMMMMMS(couldn't style it) */}
@@ -138,14 +141,20 @@ function App() {
           <p className="text-center text-ferozi text-s">Laura Johnson</p>
         </div>
 
-        <div className='featuredMain mt-[20px]'>
+        <div className='featuredMain p-[20px] mt-[20px] md:p-[60px]'>
           <div className='firstHeadingFeatured  flex-mobile-center items-start gap-3 p-[7px]'>
-            <p className="text-center text-ferozi text-s">Featured Post</p>
+            <p className="text-center text-ferozi text-2xl">Featured Post</p>
             <h3 className="text-2xl text-center mt-[50px] mb-[10px]">From Our Blog</h3>
             <button>Discover More</button>
+            
+          </div>
+          <div>
+            
           </div>
           <div className='featured-card'>
-            <img src="../public/featured/image.png" alt="" />
+            <div className='flex justify-center items-center w-full'>
+            <img className='md:w-[600px] h-[460px] object-cover object-center' src="../public/featured/image.png" alt="" />
+            </div>
             <h4 className='text-[#000000] text-sm mt-2 text-center'>Unlocking the secrets to glowing skin: Essential skincare tips</h4>
             <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum amet officia voluptates aperiam veritatis </p>
             <div className='flex justify-between items-center w-full'>
@@ -153,32 +162,36 @@ function App() {
               <a href="#">30 jan 2024</a>
               <button>Tips</button>
             </div>
-            
+
           </div>
           <div className='features md:flex justify-center items-center'>
-          <div className='featured-card md:w-[50%]'>
-            <img src="../public/featured/image copy.png" alt="" />
-            <h4 className='text-[#000000] text-sm mt-2 text-center'>Revealing the beauty within</h4>
-            <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi </p>
-            <div className='flex justify-around items-center w-full'>
-              <a href="#">nevila bright</a>
-              <a href="#">30jan 2024</a>
-              <button>Tips</button>
+            <div className='featured-card md:w-[50%]'>
+              <div className='flex items-center justify-center w-full'>
+              <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy.png" alt="" />
+              </div>
+              <h4 className='text-[#000000] text-sm mt-2 text-center'>Revealing the beauty within</h4>
+              <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi </p>
+              <div className='flex justify-around items-center w-full'>
+                <a href="#">nevila bright</a>
+                <a href="#">30jan 2024</a>
+                <button>Tips</button>
+              </div>
+            </div>
+
+            <div className='featured-card md:w-[50%]'>
+              <div className='flex items-center justify-center w-full'>
+              <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy 2.png" alt="" />
+              </div>
+              <h4 className='text-[#000000] text-sm mt-2 text-center'>The new agents of popular skin care</h4>
+              <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum </p>
+              <div className='flex justify-around items-center w-full'>
+                <a href="#">nevila bright</a>
+                <a href="#">30 jan 2024</a>
+                <button>Tips</button>
+              </div>
             </div>
           </div>
 
-          <div className='featured-card md:w-[50%]'>
-            <img src="../public/featured/image copy 2.png" alt="" />
-            <h4 className='text-[#000000] text-sm mt-2 text-center'>The new agents of popular skin care</h4>
-            <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum </p>
-            <div className='flex justify-around items-center w-full'>
-              <a href="#">nevila bright</a>
-              <a href="#">30 jan 2024</a>
-              <button>Tips</button>
-            </div>
-          </div>
-          </div>
-          
         </div>
 
 
