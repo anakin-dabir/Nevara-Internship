@@ -12,11 +12,14 @@
     }
 
     .featured-card {
-        @apply flex flex-col justify-center items-start p-[15px] gap-5;
+        @apply flex flex-col justify-center items-start p-2 gap-5;
     }
 
     .contact-card {
         @apply flex flex-col items-center justify-center gap-1;
+    }
+    .doctorsCard{
+        @apply flex flex-col justify-center items-center
     }
 }
 
