@@ -1,7 +1,6 @@
 import './App.css'
 function App() {
 
-
   return (
     <>
       <div className="MAIN w-[480px] font-serif md:w-[768px] lg:w-[1024px]">
@@ -59,20 +58,27 @@ function App() {
         <div className='aboutUs flex flex-col mt-20'>
           <p className="text-center text-ferozi text-s">ABOUT US</p>
           <h3 className="text-2xl text-center mt-[25px] mb-[10px]">Crafting Beauty Beyond Boundaries</h3>
-          <p className="opacity-50 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum amet officia voluptates aperiam veritatis </p>
-          <img className='mt-[20px] md:h-[556px] w-[768px] object-cover' src="../public/aboutus/image.png" alt="#" />
+          <p className="opacity-50 text-center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi,
+            et numquam nisi odio dolorum amet officia voluptates aperiam veritatis
+          </p>
 
+          <img className='mt-[20px] md:h-[556px] w-[768px] object-cover lg:ml-30' src="../public/aboutus/image.png" alt="#" />
+
+          {/* Mobile only image */}
           <img className='mt-[200px] mb-[200px] md:hidden' src="../public/aboutus/image copy.png" alt="#" />
-          <img className='mt-[200px] mb-[200px] lg:hidden md:block w-[768px] h-[556px]' src="../public/tablet/numbers.png" alt="#" />
 
-          <img className='mt-[200px] mb-[200px] md:hidden' src="../public/tablet/numbers.png" alt="#" />
-          <img className='mt-[200px] mb-[200px] md:hidden lg:block' src="../public/lg/numbers.png" alt="#" />
+          {/* Tablet only image */}
+          <img className='mt-[200px] mb-[200px] hidden md:block lg:hidden w-[768px] h-[556px]' src="../public/tablet/numbers.png" alt="#" />
 
+          {/* Large screen only image */}
+          <img className='mt-[200px] mb-[200px] hidden lg:block' src="../public/lg/numbers.png" alt="#" />
         </div>
+
         {/* the doctors meet div */}
-          <h4 className='text-ferozi text-sm text-center'>MEET THE DOCTORS</h4>
-          <h3 className="text-2xl text-center">Discover Our Experts</h3>
-        <div className="doctors flex flex-col gap-[40px] lg:flex-row">
+        <h4 className='text-ferozi text-sm text-center'>MEET THE DOCTORS</h4>
+        <h3 className="text-2xl text-center">Discover Our Experts</h3>
+        <div className="doctors flex flex-col gap-[40px] lg:flex-row p-3">
           <div className='doctorsCard'>
             <div>
               <img className='md:h-[285px] w-[355px] object-cover object-center' src="../public/doctors/hannah.png" alt="" />
@@ -146,14 +152,14 @@ function App() {
             <p className="text-center text-ferozi text-2xl">Featured Post</p>
             <h3 className="text-2xl text-center mt-[50px] mb-[10px]">From Our Blog</h3>
             <button>Discover More</button>
-            
+
           </div>
           <div>
-            
+
           </div>
-          <div className='featured-card'>
+          <div className='featured-card lg:hidden'>
             <div className='flex justify-center items-center w-full'>
-            <img className='md:w-[600px] h-[460px] object-cover object-center' src="../public/featured/image.png" alt="" />
+              <img className='md:w-[600px] h-[460px] object-cover object-center' src="../public/featured/image.png" alt="" />
             </div>
             <h4 className='text-[#000000] text-sm mt-2 text-center'>Unlocking the secrets to glowing skin: Essential skincare tips</h4>
             <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum amet officia voluptates aperiam veritatis </p>
@@ -164,13 +170,13 @@ function App() {
             </div>
 
           </div>
-          <div className='features md:flex justify-center items-center'>
+          <div className='features md:flex justify-center items-center lg:hidden'>
             <div className='featured-card md:w-[50%]'>
               <div className='flex items-center justify-center w-full'>
-              <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy.png" alt="" />
+                <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy.png" alt="" />
               </div>
-              <h4 className='text-[#000000] text-sm mt-2 text-center'>Revealing the beauty within</h4>
-              <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi </p>
+              <h4 className='text-[#000000] text-md mt-2 text-center'>Revealing the beauty within</h4>
+              <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi,et numquam nisi odio dolorum </p>
               <div className='flex justify-around items-center w-full'>
                 <a href="#">nevila bright</a>
                 <a href="#">30jan 2024</a>
@@ -180,9 +186,9 @@ function App() {
 
             <div className='featured-card md:w-[50%]'>
               <div className='flex items-center justify-center w-full'>
-              <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy 2.png" alt="" />
+                <img className='w-full md:h-[175px] w-[275px]' src="../public/featured/image copy 2.png" alt="" />
               </div>
-              <h4 className='text-[#000000] text-sm mt-2 text-center'>The new agents of popular skin care</h4>
+              <h4 className='text-[#000000] text-md mt-2 text-center'>The new agents of popular skin care</h4>
               <p className="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum </p>
               <div className='flex justify-around items-center w-full'>
                 <a href="#">nevila bright</a>
@@ -192,10 +198,57 @@ function App() {
             </div>
           </div>
 
+          <div class="hidden lg:flex gap-4 max-w-[1024px] mx-auto mt-10">
+
+
+            <div class="w-[55%]">
+              <div class="featured-card">
+                <div class="flex justify-center items-center w-full">
+                  <img class="w-full h-[460px] object-cover object-center" src="../public/featured/image.png" alt="" />
+                </div>
+                <h4 class="text-[#000000] text-md mt-2 text-center">Unlocking the secrets to glowing skin: Essential skincare tips</h4>
+                <p class="opacity-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime accusamus delectus animi optio veniam commodi, et numquam nisi odio dolorum amet officia voluptates aperiam veritatis </p>
+                <div class="flex justify-between items-center w-full">
+                  <a href="#">nevila bright</a>
+                  <a href="#">30 jan 2024</a>
+                  <button>Tips</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-[45%] flex flex-col gap-4">
+
+              <div class="featured-card">
+                <div class="flex justify-center items-center w-full">
+                  <img class="w-full h-[220px] object-cover" src="../public/featured/image copy.png" alt="" />
+                </div>
+                <h4 class="text-[#000000] text-sm mt-2 text-center">Revealing the beauty within</h4>
+                <div class="flex justify-between items-center w-full">
+                  <a href="#">nevila bright</a>
+                  <a href="#">30 jan 2024</a>
+                  <button>Tips</button>
+                </div>
+              </div>
+
+              <div class="featured-card">
+                <div class="flex justify-center items-center w-full">
+                  <img class="w-full h-[220px] object-cover" src="../public/featured/image copy 2.png" alt="" />
+                </div>
+                <h4 class="text-[#000000] text-sm mt-2 text-center">The new agents of popular skin care</h4>
+
+                <div class="flex justify-between items-center w-full">
+                  <a href="#">nevila bright</a>
+                  <a href="#">30 jan 2024</a>
+                  <button>Tips</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
-
         {/* the footer starts here */}
+
         <div class="footer bg-blueOrg p-[20px] flex flex-col gap-5 mt-[50px]">
           <div className='nameandabout flex flex-col  justify-center gap-1'>
             <h1 className="text-[#ffffff]">APHRODITE</h1>
